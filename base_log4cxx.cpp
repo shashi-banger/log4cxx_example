@@ -13,10 +13,13 @@ void  InitLog4cxx(char  *prop_file)
 std::string LogFormat(const char *fmt, ...)
 {
     va_list va;
-    std::string  s(1024, 0);
+    char         loc_str[1024] = "";
+    std::string  s;
     //snprintf((const char*)s.c_str(), 1024, fmt, __VA_ARGS__);
     va_start(va, fmt);
-    vsnprintf((char*)s.c_str(), 1024, fmt, va);
+    //vsnprintf((char*)s.c_str(), 1024, fmt, va);
+    vsprintf((char*)loc_str, fmt, va);
     va_end(va);
+    s = loc_str;
     return s;
 }
