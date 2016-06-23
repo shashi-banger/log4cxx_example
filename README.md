@@ -5,3 +5,5 @@ logging mechanism instead of iostream(cout) like logging.
 Temp change.
 
 Want this change on a log4cxx branch.
+
+Changed on Github itself
